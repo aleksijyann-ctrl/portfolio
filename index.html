@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | 学生時代の取り組み</title>
+    <style>
+        /* --- 基本設定 (Variables & Reset) --- */
+        :root {
+            --primary-color: #1abc9c; /* 清潔感のあるミントグリーン */
+            --text-color: #333333;
+            --bg-color: #f9f9f9;
+            --white: #ffffff;
+            --accent-bg: #eafaf6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* --- レイアウト (Layout) --- */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* --- ヘッダー (Header) --- */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- ヒーローセクション (Hero) --- */
+        .hero {
+            background-color: var(--white);
+            text-align: center;
+            padding: 120px 0;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #777;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- セクション共通 (Common) --- */
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            display: inline-block;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        /* --- About Me --- */
+        .about-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+
+        /* --- メインエピソード (Focus / Achievement) --- */
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .focus-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            border-top: 4px solid var(--primary-color);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .focus-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .focus-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .focus-card h3::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary-color);
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        /* --- 学びとスキル (Skills) --- */
+        .skills-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skill-tag {
+            background-color: var(--accent-bg);
+            color: var(--primary-color);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* --- フッター (Footer) --- */
+        footer {
+            background-color: #333;
+            color: var(--white);
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.9rem;
+        }
+
+        /* --- スマホ対応 (Responsive) --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .focus-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">PORTFOLIO</div>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#focus">Achievement</a>
+                    <a href="#skills">Skills</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>目標に向けた継続と自己管理</h1>
+            <p>日々の小さな積み重ねが、確実な成果を生むことを信じています。</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <h3>[WANG YIOU]</h3>
+                <p style="margin-top: 10px;">[日本大学 理工学部 1年]</p>
+                <p style="margin-top: 20px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    大学生活では学業に励む傍ら、自己管理能力の向上をテーマにフィットネスにも注力してきました。
+                    「計画性」と「継続力」を強みに、どのような環境でも成果を出せる人材を目指しています。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="focus" style="background-color: #eafaf6;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Key Achievement</h2>
+                <p style="margin-top: 10px;">学生時代に最も力を入れたこと：健康維持と減量への挑戦</p>
+            </div>
+
+            <div class="focus-grid">
+                <article class="focus-card">
+                    <h3>01. 課題と直面した壁</h3>
+                    <p>
+                        学業が忙しくなるにつれ生活リズムが乱れ、トレーニング時間が確保できず、減量が進まないという課題に直面しました。
+                        「時間がない」を言い訳にせず、限られたリソースの中でどう成果を出すかが問われていました。
+                    </p>
+                </article>
+
+                <article class="focus-card">
+                    <h3>02. 具体的な行動計画</h3>
+                    <p>
+                        徹底した時間管理と「隙間時間の最大化」を行いました。
+                        授業の空き時間にはジムでエアロバイクを利用し、帰宅後は30分だけでも必ず走ることを習慣化。
+                        スケジュールにあらかじめ運動時間を組み込み、無理なく続けられる仕組みを整えました。
+                    </p>
+                </article>
+
+                <article class="focus-card">
+                    <h3>03. 結果と得た学び</h3>
+                    <p>
+                        その結果、<strong>3ヶ月で5kgの減量に成功</strong>しました。
+                        この経験を通じて、目標から逆算して計画的に行動する重要性と、地道な努力を継続することで成果が出るという自信を得ることができました。
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Skills & Strengths</h2>
+            </div>
+            <div class="skills-wrapper">
+                <span class="skill-tag">自己管理力</span>
+                <span class="skill-tag">継続力</span>
+                <span class="skill-tag">タイムマネジメント</span>
+                <span class="skill-tag">目標達成志向</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
